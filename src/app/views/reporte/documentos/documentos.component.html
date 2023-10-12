@@ -1,0 +1,41 @@
+<body class="body-container">
+  <div class="mat-elevation-10">
+    <div id="informacion">
+    <div class="example-container2">
+
+      <table mat-table [dataSource]="dataSource" matSort perfectScrollbar>
+        <ng-container  matColumnDef="documento">
+          <th   mat-header-cell *matHeaderCellDef  mat-sort-header > Documentos</th>
+          <td  mat-cell *matCellDef="let element" [ngClass]="{'color': (element.id  % 2 == 0), 'color2' : (element.id  % 2 != 0)}">  {{element.documento}}  Actualizado al: {{element.fecha| date:'dd/MM/yyyy'}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef> Acciones </th>
+
+          <td mat-cell *matCellDef="let element" [ngClass]="{'color': (element.id  % 2 == 0), 'color2' : (element.id  % 2 != 0)}">
+
+             <button style="color:black;" mat-button color="black" (click)="visualizaInfo(element,1)">
+               ver
+             </button>
+             <button style="color:black;" mat-button color="black" (click)="visualizaInfo(element,2)">
+                Enviar
+            </button>
+
+          </td>
+
+      </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" ></tr>
+
+
+    </table>
+    <mat-paginator [pageSizeOptions]="[ 5,10,20,50, 100]" [length]="totalElements" aria-label="Select page of documentos" ></mat-paginator>
+
+  </div>
+  </div>
+  </div>
+   <p><p>
+   </body>

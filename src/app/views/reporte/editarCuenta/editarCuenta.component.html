@@ -1,0 +1,182 @@
+
+<form
+[formGroup]="editarForm"
+class="cuenta-form"
+fxLayout="column"
+>
+<body class="body-container">
+  <div class="mat-elevation-10">
+    <div class="example-container">
+       <div class="example-container1">
+            <mat-label>Id</mat-label>
+            <span class="example-spacer50"></span>
+            <span class="example-spacer20"></span>
+            <mat-form-field  appearance="outline">
+                <mat-label>Id</mat-label>
+                <input
+                          matInput
+                  formControlName="id"
+                  placeholder="id"
+                  [(ngModel)]="id"
+                />
+              </mat-form-field>
+
+              <img mat-card-image style="width:80px;height:80px;top:100px;border-radius: 40%;" src="../assets/images/usuario.jpg "/>
+
+          </div>
+        <div class="example-container1">
+          <mat-label>Tipo Participe</mat-label>
+          <span class="example-spacer50"></span>
+          <span class="example-spacer20"></span>
+          <span class="example-spacer20"></span>
+          <mat-form-field  appearance="outline">
+            <mat-label>Tipo participe</mat-label>
+            <input
+              matInput
+              formControlName="tipparticipe"
+              placeholder="tipparticipe"
+              [(ngModel)]="tipparticipe"
+            />
+          </mat-form-field>
+        </div>
+        <div class="example-container1">
+          <mat-label>Titular</mat-label>
+          <span class="example-spacer100"></span>
+          <span class="example-spacer20"></span>
+          <span class="example-spacer20"></span>
+          <mat-form-field class="fields-width"  appearance="outline">
+            <mat-label>Titular</mat-label>
+            <input
+              matInput
+              formControlName="nombre"
+              placeholder="nombre"
+              [(ngModel)]="nombre"
+            />
+          </mat-form-field>
+
+        </div>
+        <hr>
+        <div class="example-container4">
+          <mat-label>Contraseña</mat-label>
+            <span class="example-spacer100"></span>
+            <span class="example-spacer5"></span>
+            <mat-form-field  appearance="outline">
+            <mat-label>Contraseña</mat-label>
+
+            <input  formControlName="password"   [(ngModel)]="password" matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <button mat-icon-button matSuffix (click)="editarpass()">
+              <mat-icon>edit icon</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+
+
+        <div class="example-container4">
+          <mat-label>Confirmar Contraseña</mat-label>
+          <span class="example-spacer20"></span>
+          <span class="example-spacer10"></span>
+          <span class="example-spacer1"></span>
+          <mat-form-field  appearance="outline">
+            <mat-label>Confirmar Contraseña</mat-label>
+            <input  formControlName="repassword"    [(ngModel)]="repassword" matInput [type]="hide1 ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide repassword'" [attr.aria-pressed]="hide1">
+          <mat-icon >{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <button mat-icon-button matSuffix (click)="editarrp()">
+          <mat-icon class="white-icon">edit icon</mat-icon>
+        </button>
+        <button mat-icon-button matSuffix (click)="grabarrp()">
+          <mat-icon class="white-icon">save icon</mat-icon>
+        </button>
+
+        </mat-form-field>
+        </div>
+
+
+        <div class="example-container4">
+          <mat-label>Nombre partícipe</mat-label>
+          <span class="example-spacer50"></span>
+          <span class="example-spacer10"></span>
+          <span class="example-spacer5"></span>
+          <mat-form-field class="fields-width"  appearance="outline">
+            <mat-label>Nombre partícipe</mat-label>
+            <input
+              matInput
+              formControlName="nombreparticipe"
+              placeholder="participe"
+              [(ngModel)]="nombreparticipe"
+              length=200
+            />
+          </mat-form-field>
+        </div>
+
+
+
+        <div class="example-container4">
+          <mat-label>Correo Electronico</mat-label>
+          <span class="example-spacer50"></span>
+          <span class="example-spacer5"></span>
+          <span class="example-spacer2"></span>
+          <mat-form-field class="fields-width"  appearance="outline">
+            <mat-label>Correo Electronico</mat-label>
+            <input
+              matInput
+              formControlName="email"
+              placeholder="correo electronico"
+              [(ngModel)]="email"
+            />
+          </mat-form-field>
+        </div>
+
+
+        <div class="example-container4">
+          <mat-label >Telefonos</mat-label>
+        </div>
+        <div class="example-container2">
+          <span class="example-spacer50"></span>
+          <span class="example-spacer50"></span>
+          <span class="example-spacer50"></span>
+          <mat-form-field appearance="outline">
+            <mat-label>Movil</mat-label>
+            <input
+              matInput
+              formControlName="movil"
+              placeholder="movil"
+              [(ngModel)]="movil"
+            />
+          </mat-form-field>
+        </div>
+        <div class="example-container2">
+          <span class="example-spacer50"></span>
+          <span class="example-spacer50"></span>
+          <span class="example-spacer50"></span>
+          <mat-form-field appearance="outline">
+            <mat-label>Corporativo</mat-label>
+            <input
+              matInput
+              formControlName="corporativo"
+              placeholder="corporativo"
+              [(ngModel)]="corporativo"
+            />
+          </mat-form-field>
+        </div>
+        <div class="example-container2">
+          <span class="example-spacer50"></span>
+          <span class="example-spacer50"></span>
+          <span class="example-spacer50"></span>
+          <mat-form-field appearance="outline">
+            <mat-label>Telefono fijo</mat-label>
+            <input
+              matInput
+              formControlName="fijo"
+              placeholder="telefono fijo"
+              [(ngModel)]="fijo"             />
+          </mat-form-field>
+        </div>
+      </div>
+  </div>
+ </body>
+</form>

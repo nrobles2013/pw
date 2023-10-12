@@ -1,0 +1,48 @@
+<body>
+  <div class="flex-container" id="contenido">
+
+    <div style="flex-grow: 1">
+        <mat-card class="card_class">
+          <mat-card-header>
+            <mat-card-title class="title_class">Número de participaciones</mat-card-title>
+            <mat-card-subtitle class="subtitle">{{valnumpar}}</mat-card-subtitle>
+            <img mat-card-image style="width:60px;height:60px;top:40px" src="../assets/images/img4.png "/>
+          </mat-card-header>
+        </mat-card>
+        <div class="estadistica_class" >
+           <canvas id="canvas4"  width="10" height="2px"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="flex-container" id="contenido">
+
+      <div style="flex-grow: 1">
+        <mat-card class="card_class bg-warning">
+          <mat-card-header>
+            <mat-card-title class="title_class">Total de inversión realizada S/</mat-card-title>
+            <mat-card-subtitle class="subtitle">{{valactualfecha}}</mat-card-subtitle>
+            <mat-card-subtitle class="subtitle">{{valactual}}</mat-card-subtitle>
+            <img mat-card-image style="width:60px;height:60px;top:40px" src="../assets/images/img5.png "/>
+          </mat-card-header>
+        </mat-card>
+          <div class="estadistica_class">
+           <canvas id="canvas5"  width="10" height="2px"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="flex-container" id="contenido">
+
+        <div style="flex-grow: 1">
+          <mat-card class="card_class bg-info">
+            <mat-card-header>
+              <mat-card-title class="title_class">Valor Actual de tu Inversión</mat-card-title>
+              <mat-card-subtitle class="subtitle">{{valortotal}}</mat-card-subtitle>
+              <img mat-card-image style="width:60px;height:60px;top:40px" src="../assets/images/img6.png "/>
+            </mat-card-header>
+          </mat-card>
+             <div class="estadistica_class">
+              <canvas id="canvas6"  width="10" height="2px"></canvas>
+             </div>
+          </div>
+        </div>
+  </body>

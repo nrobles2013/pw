@@ -1,0 +1,32 @@
+<body class="body-container">
+  <div class="mat-elevation-10">
+    <div class="app_example-container2">
+      <mat-grid-list cols="2" rowHeight="fit" gutterSize="1px" [style.height]="'200px'">
+        <mat-grid-tile *ngFor="let i of listinformacion">
+        <mat-card [style.width]="'100%'">
+          <div fxLayout="row">
+         		<div fxFlex fxFlexAlign="center">
+							<div fxLayout="row">
+								Documentos :  {{i.documento}}
+                <button style="color:black;" mat-button color="black" (click)="visualizaInfo(i,1)">
+                  ver
+                </button>
+                <button style="color:black;" mat-button color="black" (click)="visualizaInfo(i,2)">
+                   Enviar
+               </button>
+							</div>
+              <div fxLayout="row">
+								F.Actualización :  {{i.fecha| date:'dd/MM/yyyy'}}
+        			</div>
+
+
+            </div>
+       </div>
+        </mat-card>
+			</mat-grid-tile>
+		</mat-grid-list>
+
+  </div>
+  </div>
+   <p><p>
+   </body>

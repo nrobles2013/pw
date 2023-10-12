@@ -1,0 +1,63 @@
+.body-container {
+  display: flex;
+  background-color: rgba(246, 246, 249, 0.705);
+  color:white;
+}
+
+
+
+
+.example-container {
+  border-radius:30px;
+  width: 100%;
+  color:black;
+  background-color: rgb(201, 203, 203);
+}
+
+.example-container1 {
+  width: 98%;
+  margin: 10px;
+  color:black;
+  background-color: rgb(228, 207, 132);
+}
+
+.contactanos-container{
+  color:aqua
+}
+.fields-width {
+  width: 50% !important;
+}
+
+
+mat-label{
+  color: rgb(9, 9, 9);
+  margin-left: 20px;
+}
+
+
+.mat-elevation-10{
+  width:1200px;
+  box-sizing: border-box;
+  border-radius:30px;
+-webkit-border-radius: 21px 21px 21px 20px;
+-moz-border-radius: 21px 21px 21px 20px;
+}
+
+
+mat-form-field.mat-form-field.mat-white {
+  &.mat-focused {
+    .mat-form-field-label {
+        color: #FAFAFA;
+    }
+    .mat-form-field-ripple {
+        background-color: #FAFAFA !important;
+    }
+  }
+  .mat-form-field-label,.mat-form-field-label.mat-focused,
+  .mat-form-field.mat-focused.matform-field-should-float {
+      color: #FAFAFA;
+  }
+  .mat-form-field-underline, .mat-form-field-underline.mat-focused {
+      background-color: #FAFAFA;
+    }
+  }

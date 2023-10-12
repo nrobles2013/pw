@@ -1,0 +1,33 @@
+<p routerLink="/others/n1"></p>
+
+<div fxLayout="row wrap">
+  <div
+    fxFlex="100"
+    fxFlex.gt-sm="66.67"
+    fxFlex.sm="50"
+    [@animate]="{ value: '*', params: { y: '50px', delay: '600ms' } }"
+  >
+    <mat-card class="p-0">
+      <mat-tab-group>
+        <mat-tab label="Traffic Vs Sales">
+          <div
+            echarts
+            [options]="trafficVsSaleOptions"
+            [merge]="trafficVsSale"
+            [autoResize]="true"
+            style="height: 255px"
+          ></div>
+        </mat-tab>
+        <mat-tab label="Sessions">
+          <div
+            echarts
+            [options]="sessionOptions"
+            [merge]="sessions"
+            [autoResize]="true"
+            style="height: 255px"
+          ></div>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>
+</div>

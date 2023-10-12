@@ -1,0 +1,60 @@
+<form
+[formGroup]="consultaForm"
+class="signup-form"
+fxLayout="column"
+(ngSubmit)="buscardocumentos()"
+>
+<body class="body-container">
+
+    <div class="mat-elevation-10">
+            <div class="example-container">
+
+                <mat-form-field class="example-container3"  appearance="outline">
+                <mat-label>Documentos</mat-label>
+                <mat-select   (selectionChange)="ejecutoDocumentos($event)"  placeholder="Seleccione Documentos" formControlName="iddocumentoSelected"   [(ngModel)]="iddocumentoSelected"  >
+                      <mat-option   *ngFor="let p of getListDocumentos" [value]="p.codigo" >
+                          {{p.descripcion}}
+                      </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <span class="example-spacer"></span>
+                <mat-form-field  class="example-container3"  appearance="outline">
+                  <mat-label>Año</mat-label>
+                  <mat-select (selectionChange)="ejecutoAnio($event)"  placeholder="Seleccione Año" formControlName="idAnioSelected"  [(ngModel)]="idAnioSelected"  >
+                      <mat-option  *ngFor="let r of getListAnio" [value]="r.anio" >
+                          {{r.anio}}
+                      </mat-option>
+                  </mat-select>
+                </mat-form-field>
+            <span class="example-spacer"></span>
+            <mat-form-field  class="example-container3" appearance="outline" >
+              <mat-label>Periodo</mat-label>
+              <mat-select (selectionChange)="ejecutoPeriodo($event)"  placeholder="Seleccione Periodo" formControlName="idPeriodoSelected" [(ngModel)]="idPeriodoSelected"  >
+                <mat-option  *ngFor="let p of getListPeriodo" [value]="p.nperiodo" >
+                      {{p.descripcion}}
+                  </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <span class="example-spacer"></span>
+            <button style="width:10px" mat-raised-button>
+              <img class="imagenlupa" src="assets/images/lupa.jpg" alt="MDN"/>
+            </button>
+          </div>
+
+          <hr>
+             <div class="example-container" style="border:1px;">
+                  <textarea class="example-full-width"   rows="10" cols="40" style ="border:1px" [ngClass]="{'color': (getflag==true)}"  [disabled]="true" matInput >{{getcontenido}}</textarea>
+              </div>
+      </div>
+  </body>
+  <div *ngIf="(isLoading | async); then loading else content"></div>
+  <ng-template #loading>
+    <div class="overlay">
+      <div class="spinner"></div>
+    </div>
+  </ng-template>
+  <ng-template #content>
+
+  </ng-template>
+
+ </form>

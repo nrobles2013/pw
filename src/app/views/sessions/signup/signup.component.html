@@ -1,0 +1,114 @@
+<div class="seciton-left">
+  <div class="section-left-content">
+  </div>
+</div>
+
+
+<div
+  class="form-holder h-full-screen mat-elevation-z4 mat-bg-card"
+  [perfectScrollbar]="{}"
+>
+  <form
+    [formGroup]="signupForm"
+    class="signup-form"
+    fxLayout="column"
+    fxLayoutAlign="start"
+    (ngSubmit)="signAdd()"
+  >
+    <!-- headline -->
+    <div class="form-headline text-center mb-16">
+      <p class="text-muted">Registrar cuenta de acceso</p>
+    </div>
+    <div class="mb-32" fxLayout="row wrap" fxLayoutAlign="center center">
+      <img width="300px" src="assets/Logo.jpg" alt="" />
+    </div>
+    <div fxLayout="row wrap" fxLayoutGap.md="16px" fxLayoutGap.lg="16px">
+
+      <mat-form-field  class="full-width" >
+        <mat-select (selectionChange)="ejecuto($event)"  placeholder="seleccionar tipoparticipe" formControlName="idtipoparticipeSelected" [(ngModel)]="idtipoparticipeSelected" >
+            <mat-option *ngFor="let p of tipoparticipe" [value]="p.idparticipe" >
+                {{p.descripcion}}
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+
+      <mat-form-field fxFlex="1 1 0%" appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input
+          formControlName="nombre"
+          matInput
+          type="text"
+          name="Last_name"
+          placeholder="nombre"
+          [(ngModel)]="nombre"
+        />
+      </mat-form-field>
+    </div>
+
+    <mat-form-field fxFlex="1 1 0%" appearance="outline">
+      <mat-label>Apellido</mat-label>
+      <input
+        formControlName="apellido"
+        matInput
+        type="text"
+        name="apellido"
+        placeholder="Last name"
+        [(ngModel)]="apellido"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Username</mat-label>
+      <input
+        matInput
+        formControlName="username"
+        type="text"
+        name="username"
+        placeholder="Username"
+        [(ngModel)]="username"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        formControlName="email"
+        type="email"
+        name="email"
+        placeholder="Email"
+        [(ngModel)]="email"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        formControlName="password"
+        type="password"
+        name="password"
+        placeholder="********"
+        [(ngModel)]="password"
+      />
+    </mat-form-field>
+
+    <mat-checkbox class="mb-24" formControlName="agreed"
+      >I agree with terms and condtions</mat-checkbox
+    >
+    <button mat-raised-button color="primary" >Signup</button>
+    <mat-divider class="my-32"></mat-divider>
+
+
+
+    <div class="text-center">
+      <a
+        [routerLink]="'/sessions/signin'"
+        class="mat-color-primary text-center full-width"
+        >Sign in with an existing account</a
+      >
+    </div>
+  </form>
+</div>

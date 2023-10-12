@@ -1,0 +1,188 @@
+
+.card_class{
+  margin: 1%;
+  width: 300px;
+  height: 180px;
+  float: left;
+  align-items: center;
+  box-shadow: 6px 6px;
+  resize:horizontal;
+  background-color: rgb(28, 55, 110);
+  flex-grow: 999;
+}
+
+
+.estadistica_class{
+  margin: 0%;
+  width: 580px;
+  height: 200px;
+  display: flex;
+  float: left;
+  align-items: center;
+  resize:horizontal;
+  font-size: 55px;
+  box-shadow: 6px 6px;
+  background-color: white;
+  flex-wrap: wrap;
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 60%;
+}
+
+.title_class{
+  color: aliceblue;
+  text-align: center;
+  margin: 10px;
+  font-size: 20px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+}
+
+.example-container {
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+.example-container2 {
+  flex-wrap: wrap;
+  width: 80%;
+
+}
+
+.subtitle{
+  color: aliceblue;
+  margin: 2;
+  text-align: center;
+  font-size: 14px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+
+#contenido {
+  background-color: #fbf9f9;
+	float:left;
+	width:100%;
+	padding:0px;
+	margin-top:0px;
+	text-align:center;
+}
+
+#centrado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Estructura flex */
+
+.flex-container {
+	display: flex;
+	align-items: stretch;
+  background-color: #fbf9f9;
+}
+
+.flex-container > div {
+	color: black;
+  background-color: #fbf9f9;
+	width: 100px;
+	margin: 0px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 15px;
+}
+
+body{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+/* Nav bar */
+
+ul {
+	list-style-type: none;
+	margin: 5px;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover:not(.active) {
+	background-color: #111;
+}
+
+.active {
+	background-color: #4CAF50;
+}
+
+/* Galería de imágenes */
+
+div.gallery {
+	border: 1px solid #ccc;
+	width: 150px; height: 150px;
+}
+
+div.gallery:hover {
+	border: 1px solid #777;
+}
+
+div.gallery img {
+	width: 100%;
+	height: auto;
+}
+
+div.desc {
+	padding: 5px;
+	text-align: center;
+	font-size: 12px;
+}
+
+.responsive {
+	padding: 0 6px;
+	float: left;
+	width: 31%;
+}
+
+@media only screen and (max-width: 720px) {
+	.responsive {
+		width: 30%;
+		margin: 2px 0;
+	}
+}
+
+@media only screen and (max-width: 719px) {
+	.responsive {
+		width: 50%;
+		margin: 2px 0;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.responsive {
+		width: 100%;
+	}
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+imgs {
+  height: 20px;
+  width: 20px;
+
+}

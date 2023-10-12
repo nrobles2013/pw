@@ -1,0 +1,37 @@
+<div class="body-container">
+  <div class="mat-elevation-10">
+
+      <div class="example-container3">
+      <table mat-table [dataSource]="dataSource" matSort >
+        <ng-container  matColumnDef="documento">
+          <th   mat-header-cell *matHeaderCellDef  mat-sort-header > Documentos</th>
+          <td  mat-cell *matCellDef="let element" [ngClass]="{'color': (element.id  % 2 == 0), 'color2' : (element.id  % 2 != 0)}">  {{element.documento}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fecha">
+          <th  mat-header-cell *matHeaderCellDef  mat-sort-header > Fecha Actualización</th>
+          <td  mat-cell *matCellDef="let element" [ngClass]="{'color': (element.id  % 2 == 0), 'color2' : (element.id  % 2 != 0)}">  {{element.fecha| date:'dd/MM/yyyy'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="accion">
+          <th mat-header-cell *matHeaderCellDef> Acción </th>
+          <td mat-cell *matCellDef="let element" [ngClass]="{'color': (element.id  % 2 == 0), 'color2' : (element.id  % 2 != 0)}">
+              <button mat-button color="primary" (click)="visualizaInfo(element.ruta)">
+                  <mat-icon style="color:red;">search icon</mat-icon>
+              </button>
+
+          </td>
+      </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" ></tr>
+
+
+    </table>
+    <mat-paginator [pageSizeOptions]="[ 5,10,20,50, 100]" [length]="totalElements" aria-label="Select page of documentos" ></mat-paginator>
+  </div>
+
+  </div>
+</div>
+  <p><p>

@@ -1,0 +1,48 @@
+<body>
+  <div class="flex-container" id="contenido">
+      <div style="flex-grow: 1">
+          <mat-card class="card_class bg-danger">
+            <mat-card-header >
+              <mat-card-title class="title_class">Valor Referencial de la Cuota</mat-card-title>
+              <mat-card-subtitle class="subtitle">{{valactualfecha}}</mat-card-subtitle>
+              <mat-card-subtitle class="subtitle">{{valactual}}</mat-card-subtitle>
+              <img mat-card-image style="width:50px;height:50px;top:40px" src="../assets/images/img1.png "/>
+
+            </mat-card-header>
+          </mat-card>
+          <div class="estadistica_class" >
+             <canvas id="canvas2"  width="10" height="2px"></canvas>
+          </div>
+        </div>
+    </div>
+
+    <div class="flex-container" id="contenido">
+      <div style="flex-grow: 1">
+          <mat-card class="card_class">
+            <mat-card-header >
+              <mat-card-title class="title_class">Valor referencial del fondo</mat-card-title>
+              <mat-card-subtitle class="subtitle">{{valactualfecha}}</mat-card-subtitle>
+              <mat-card-subtitle class="subtitle">{{valfondo}}</mat-card-subtitle>
+              <img mat-card-image style="width:50px;height:50px;top:40px" src="../assets/images/img2.png "/>
+            </mat-card-header>
+          </mat-card>
+          <div class="estadistica_class">
+             <canvas id="canvas1"  width="10" height="2px"></canvas>
+            </div>
+        </div>
+      </div>
+      <div class="flex-container" id="contenido">
+        <div style="flex-grow: 1">
+            <mat-card class="card_class bg-success">
+              <mat-card-header>
+                <mat-card-title class="title_class">YTD</mat-card-title>
+                <mat-card-subtitle class="subtitle">{{valYTD}}%</mat-card-subtitle>
+                <img mat-card-image style="width:54px;height:54px;left:80px;top:40px" src="../assets/images/img3.png "/>
+              </mat-card-header>
+            </mat-card>
+               <div class="estadistica_class">
+                <canvas id="canvas3"  width="10" height="2px"></canvas>
+               </div>
+        </div>
+      </div>
+ </body>

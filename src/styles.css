@@ -1,0 +1,36 @@
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+::ng-deep {
+    .mat-mdc-text-field-wrapper.mdc-text-field {
+        height: 30px !important;
+    }
+    mat-label {
+        font-size:12px;
+    }
+    .mat-mdc-text-field-wrapper
+        .mat-mdc-form-field-flex
+        .mat-mdc-floating-label {
+        top: 13px;
+    }
+    .mat-mdc-text-field-wrapper.mdc-text-field--outlined
+        .mat-mdc-form-field-infix {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 30px;
+    }
+    .mat-mdc-form-field-flex {
+        height: 30px;
+    }
+    .wrapper .table-title .filter .search-placeholder-icon {
+        font-size: 12px;
+        padding-top: 8px;
+    }
+    .mdc-floating-label--float-above {
+        font-size: 12px !important;
+    }
+    .mat-datepicker-input {
+        padding-top: 3px !important;
+        font-size:12px !important;
+    }
+}

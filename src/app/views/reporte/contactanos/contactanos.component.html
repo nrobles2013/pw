@@ -1,0 +1,57 @@
+
+<form
+[formGroup]="contactanosForm"
+fxLayout="column"
+(ngSubmit)="enviarContatos()"
+>
+<body class="body-container">
+  <div class="mat-elevation-10">
+
+    <div class="example-container">
+      <mat-label style="font-weight: bold;font-size:20px">Contactanos</mat-label>
+
+      <div class="example-container1">
+          <p>
+            <mat-form-field class="fields-width" appearance="outline">
+              <mat-label style="color:white">Asunto</mat-label>
+              <input
+                matInput style="color:white"
+                formControlName="asunto"
+                [(ngModel)]="asunto"
+              />
+            </mat-form-field>
+
+              <span class="example-spacer"></span>
+              <button style="width:10px" mat-flat-button>
+                <mat-icon>mail</mat-icon>
+              </button>
+        </div>
+        <div class="example-container1">
+          <p>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label style="color:white">Mensaje</mat-label>
+              <textarea style="color:white"
+                matInput color
+                cdkTextareaAutosize
+                formControlName="mensaje"
+                [(ngModel)]="mensaje"
+                cdkAutosizeMinRows="1"
+                cdkAutosizeMaxRows="20"
+                rows="8" cols="40"
+                ></textarea>
+            </mat-form-field>
+          </div>
+
+    <p>
+      <p>
+        <p>
+    <mat-label>Puedes Comunicarte también</mat-label>
+    <p>
+    <mat-label>Teléfono: +5114283820  anexo 510, 515, 500</mat-label>
+    <p>
+    <mat-label>Correo electrónico: operaciones@popular-safi.com </mat-label>
+  </div>
+</div>
+
+</body>
+</form>

@@ -1,0 +1,88 @@
+<form
+[formGroup]="movimientoForm"
+(ngSubmit)="buscarmovimiento()"
+>
+<body class="body-container">
+
+<div class="mat-elevation-10">
+  <div class="example-container">
+   <div class="example-container4" >
+    <mat-form-field  appearance="outline">
+      <mat-label>Año</mat-label>
+      <mat-select   (selectionChange)="ejecutoAnio($event)"  placeholder="Seleccione Año" formControlName="idAnioSelected"   [(ngModel)]="idAnioSelected"  >
+            <mat-option  [value]="0" >
+            -- Todos --
+          </mat-option>
+            <mat-option   *ngFor="let p of getListAnio" [value]="p.anio" >
+                {{p.anio}}
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+    <span class="example-spacer"style="padding: 15px;"></span>
+      <mat-form-field  appearance="outline">
+        <mat-label>Mes</mat-label>
+        <mat-select (selectionChange)="ejecutoMes($event)"  placeholder="Seleccione Mes" formControlName="idMesSelected"  [(ngModel)]="idMesSelected"  >
+            <mat-option  [value]="0" >
+                -- Todos --
+            </mat-option>
+            <mat-option  *ngFor="let r of getListMeses" [value]="r.idmes" >
+                {{r.mes}}
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+    <span class="example-spacer" style="padding: 15px;" ></span>
+      <mat-form-field   appearance="outline" >
+        <mat-label>Tipo de Operación</mat-label>
+        <mat-select (selectionChange)="ejecutoTransa($event)"  placeholder="Seleccione Tipo de Operación" formControlName="idtransaSelected" [(ngModel)]="idtransaSelected"  >
+            <mat-option  [value]="0" >
+              -- Todos --
+          </mat-option>
+            <mat-option  *ngFor="let p of getListTransa" [value]="p.idtransaccion" >
+                {{p.descripcion}}
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+    <span class="example-spacer" style="padding: 15px;"></span>
+    <button style="width:10px" mat-raised-button>
+      <img class="imagenlupa" src="assets/images/lupa.jpg" alt="MDN"/>
+    </button>
+  </div>
+</div>
+
+  <div class="example-container">
+    <table  mat-table [dataSource]="dataSource" matSort perfectScrollbar>
+      <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header > Fecha</th>
+        <td  mat-cell *matCellDef="let element" [ngClass]="{'color': (element.destipoopera == 'Suscripcion'), 'color2' : (element.destipoopera == 'Dividendos')}">  {{element.fecha| date:'dd/MM/yyyy'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="destipoopera">
+        <th  mat-header-cell *matHeaderCellDef  mat-sort-header [ngClass]="{accent:true}" > Monto</th>
+        <td  mat-cell *matCellDef="let element" [ngClass]="{'color': (element.destipoopera == 'Suscripcion'), 'color2' : (element.destipoopera == 'Dividendos')}"> {{element.destipoopera}}  / {{element.monto | number:'1.1-2' }} </td>
+      </ng-container>
+
+       <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header class="header-container3"  class="colorHeader" [ngClass]="{accent:true}"> Descripción</th>
+        <td  mat-cell *matCellDef="let element" [ngClass]="{'color': (element.destipoopera == 'Suscripcion'), 'color2' : (element.destipoopera == 'Dividendos')}"> {{element.descripcion}} </td>
+      </ng-container>
+
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" ></tr>
+
+
+  </table>
+  <mat-paginator [pageSizeOptions]="[ 5,10,20,50, 100]" [length]="totalElements" aria-label="Select page of movimientos" ></mat-paginator>
+
+
+</div>
+
+
+  <p><p>
+  Muestra los movimientos realizados en los últimos 2 años
+</div>
+</body>
+
+</form>

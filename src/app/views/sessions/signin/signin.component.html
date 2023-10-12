@@ -1,0 +1,93 @@
+<div class="seciton-left">
+  <!-- <div class="section-left-content">
+    <h1 class="text-36 font-weight-light">Registro</h1>
+    <p class="mb-24 text-small">-Si desea registrarse-</p>
+    <button mat-flat-button color="accent" [routerLink]="'/sessions/signup2'">
+      Registrarse
+    </button>
+  </div> -->
+</div>
+
+<div
+  class="form-holder h-full-screen mat-bg-card mat-elevation-z4"
+  [perfectScrollbar]="{}"
+>
+  <form
+    [formGroup]="signinForm"
+    class="signup-form"
+    fxLayout="column"
+    (ngSubmit)="signin()"
+  >
+    <!-- headline -->
+    <div class="form-headline text-center mb-32">
+      <h1 class="font-weight-light">BIENVENIDO</h1>
+    </div>
+
+    <div class="mb-48" fxLayout="row wrap" fxLayoutAlign="center center">
+      <img width="600px" src="assets/Logo.jpg" alt="" />
+    </div>
+
+    <mat-form-field  class="full-width" >
+      <mat-select (selectionChange)="ejecuto($event)"  placeholder="seleccionar tipoparticipe" formControlName="idtipoparticipeSelected" [(ngModel)]="idtipoparticipeSelected" >
+          <mat-option *ngFor="let p of tipoparticipe" [value]="p.idparticipe" >
+              {{p.descripcion}}
+          </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <DIV>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>DNI</mat-label>
+        <input
+          matInput
+          formControlName="username"
+          type="username"
+          name="username"
+          placeholder="username"
+          [(ngModel)]="username"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          type="password"
+          name="password"
+          placeholder="********"
+          [(ngModel)]="password"
+        />
+      </mat-form-field>
+      <!-- <div class="nav-item-sep"> -->
+
+      <br />
+    </DIV>
+    <!-- </DIV> -->
+
+    <br /><br />
+    <mat-checkbox
+      name="rememberMe"
+      [formControl]="signinForm.controls['rememberMe']"
+      >Recuerdame en este dispositivo</mat-checkbox
+    >
+    <mat-label >{{errorMsg}}</mat-label>
+    <button mat-raised-button color="primary">
+      Ingresar
+    </button>
+     <mat-divider class="my-32"></mat-divider>
+
+     <a
+     (click)="olvidoClave()"
+     class="mat-color-primary colortexto text-center full-width"
+     >Olvido su contraseña</a>
+    <!-- <div class="mb-24" fxLayout="column" fxLayoutGap="16px">
+      <button mat-raised-button color="warn" type="button">
+        Signin with Auth0
+      </button>
+      <button mat-raised-button color="warn" type="button">
+        Firebase Signin
+      </button>
+    </div> -->
+  </form>
+</div>

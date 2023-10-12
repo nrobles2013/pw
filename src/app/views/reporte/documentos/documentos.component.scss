@@ -1,0 +1,148 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+my-app {
+  display: block;
+  height: 100vh;
+}
+
+
+
+
+.mat-elevation-10{
+  width:1200px;
+  box-sizing: border-box;
+  border-radius: 21px 21px 21px 20px;
+-webkit-border-radius: 21px 21px 21px 20px;
+-moz-border-radius: 21px 21px 21px 20px;
+}
+.color {
+  color: rgb(48, 46, 46);
+  background-color: rgb(228, 207, 132);
+}
+.color2 {
+  color: white;
+  background-color: rgb(26, 47, 82);
+
+}
+
+
+.color3 {
+  color: rgb(48, 46, 46);
+  background-color: rgb(228, 207, 132);
+}
+.color4 {
+  color: rgb(5, 5, 5);
+  background-color: rgb(96, 136, 205);
+
+}
+
+.btn{
+  width:80px;height:60px
+}
+
+
+
+
+.body-container {
+  display: flex;
+  background-color: rgba(246, 246, 249, 0.705);
+}
+
+.example-container {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  background-color: rgba(246, 246, 249, 0.705);
+}
+.example-container2 {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  background-color: rgba(246, 246, 249, 0.705);
+
+}
+
+.app_example-container2 {
+  margin-left: 10px;
+  padding: 0px;
+  width: 100%;
+  background-color: rgba(179, 132, 46, 0.705);
+  border-radius: 10px;
+}
+
+.example-container3 {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  background-color: rgba(190, 190, 191, 0.966);
+
+}
+
+.example-container4 {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  background-color: rgba(190, 190, 191, 0.966);
+  font-weight: bold;
+}
+
+
+.new-row {
+  background-color: #4216b9
+}
+
+.header-container2 {
+  width: 25%;
+}
+
+.header-container3 {
+  width: 30%;
+}
+
+.example-spacer {
+  flex: 3 12 auto;
+}
+
+
+
+.example-tabla{
+  background-color: aquamarine;
+}
+
+table{
+  background-color: rgb(201, 203, 203);
+  border-radius:20px;
+}
+td,
+th {
+  background-color: rgb(252, 253, 252);
+
+}
+button{
+  border-radius: 21px 21px 21px 20px;
+-webkit-border-radius: 21px 21px 21px 20px;
+-moz-border-radius: 21px 21px 21px 20px;
+  background-color: antiquewhite;
+  color: black;
+}
+a{
+  border-radius: 25% 10%;
+  background-color: antiquewhite;
+  color: black;
+}
+
+.rectangulo{
+  border-radius: 10px;
+}
+
+.imagenlupa{
+  width: 80px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+

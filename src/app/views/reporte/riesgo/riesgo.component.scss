@@ -1,0 +1,40 @@
+.body-container {
+  width: 1900px;
+  overflow: auto;
+  background-color: rgb(226, 230, 230);
+}
+
+table {
+  width: 5000px;
+}
+
+td{
+    background-color:azure;
+}
+
+th{
+  background-color:aquamarine;
+}
+pb-16{
+  background-color: bisque;
+}
+
+.example-container {
+  overflow-x: scroll;
+}
+
+
+.mat-table {
+  mat-row, mat-header-row, mat-footer-row {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  mat-cell:first-child, mat-footer-cell:first-child, mat-header-cell:first-child {
+    padding-left: 0;
+  }
+
+  mat-cell:last-child, mat-footer-cell:last-child, mat-header-cell:last-child {
+    padding-right: 0;
+  }
+}
